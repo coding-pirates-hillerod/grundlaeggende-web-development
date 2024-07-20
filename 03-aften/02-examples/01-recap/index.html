@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Min awesome hjemmeside</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Min awesome hjemmeside</h1>
+    <p>Velkommen til min personlige hjemmeside - den er awesome!</p>
+    <div>
+      <img src="me.jpg" />
+      <p>Jeg hedder Jonas og er for <b>syg</b> og <em>vildt</em> cool!</p>
+    </div>
+    <p>
+      Jeg elsker fodbold og læser ofte nyheder på
+      <a href="https://bold.dk">bold.dk</a>
+    </p>
+    <p>Andre ting jeg elsker:</p>
+    <ul id="myList">
+      <li>Pizza</li>
+      <li>Nyheder på tegnsprog</li>
+      <li>Ost</li>
+    </ul>
+    <input type="text" id="input" />
+    <button id="btn">Tilføj</button>
+
+    <script>
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        // Få refer til input elementet
+        var input = document.getElementById("input");
+
+        // Få værdien af det indtastede i input elementet
+        var text = input.value;
+
+        // Lav et nyt "li" element
+        var li = document.createElement("li");
+
+        // Tilføj indtastede tekst til "li"
+        li.innerText = text;
+
+        // Få reference til "ul"
+        var ol = document.getElementById("myList");
+
+        // Tilføj ny "li" til "ol"
+        ol.appendChild(li);
+
+        // Slet tekst fra input
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>
