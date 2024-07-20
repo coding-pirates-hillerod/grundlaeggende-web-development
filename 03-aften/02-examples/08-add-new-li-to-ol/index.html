@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Min awesome hjemmeside</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Min awesome hjemmeside</h1>
+    <p>Velkommen til min personlige hjemmeside - den er awesome!</p>
+    <div>
+      <img src="me.jpg" />
+      <p>Jeg hedder Jonas og er for <b>syg</b> og <em>vildt</em> cool!</p>
+    </div>
+    <p>
+      Jeg elsker fodbold og læser ofte nyheder på
+      <a href="https://bold.dk">bold.dk</a>
+    </p>
+    <p>Andre ting jeg elsker:</p>
+    <ul id="myList">
+      <li>Pizza</li>
+      <li>Nyheder på tegnsprog</li>
+      <li>Ost</li>
+    </ul>
+    <input type="text" id="input" />
+    <button id="btn">Tilføj</button>
+
+    <script>
+      // Få reference til "button" element med id'et "btn"
+      var btn = document.getElementById("btn");
+
+      // Tilføj "event listener" for "click" event til "btn" variable
+      btn.addEventListener("click", function () {
+        // Få værdien fra "input" elementet
+        var inputEl = document.getElementById("input");
+        var text = inputEl.value;
+
+        // Skab nyt "li" element med teksten fra "input"
+        var li = document.createElement("li");
+        li.innerText = text;
+
+        // Tilføj "li" til "ol"
+        var ol = document.getElementById("myList");
+        ol.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

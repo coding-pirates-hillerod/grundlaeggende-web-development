@@ -25,28 +25,26 @@
     <button id="btn">Tilføj</button>
 
     <script>
+      // Få reference til "button" element med id'et "btn"
       var btn = document.getElementById("btn");
+
+      // Tilføj "event listener" for "click" event til "btn" variable
       btn.addEventListener("click", function () {
-        // Få refer til input elementet
-        var input = document.getElementById("input");
+        // Få værdien fra "input" elementet
+        var inputEl = document.getElementById("input");
+        var text = inputEl.value;
 
-        // Få værdien af det indtastede i input elementet
-        var text = input.value;
-
-        // Lav et nyt "li" element
+        // Skab nyt "li" element med teksten fra "input"
         var li = document.createElement("li");
-
-        // Tilføj indtastede tekst til "li"
         li.innerText = text;
 
-        // Få reference til "ul"
+        // Tilføj "li" til "ol"
         var ol = document.getElementById("myList");
-
-        // Tilføj ny "li" til "ol"
         ol.appendChild(li);
 
-        // Slet tekst fra input
-        input.value = "";
+        // Ryd "input" og sæt fokus på det
+        inputEl.value = "";
+        inputEl.focus();
       });
     </script>
   </body>
