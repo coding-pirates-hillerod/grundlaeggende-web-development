@@ -21,16 +21,18 @@
       <li>Nyheder på tegnsprog</li>
       <li>Ost</li>
     </ul>
-    <div class="form">
-      <input type="text" id="input" />
-      <button id="btn">Tilføj</button>
-    </div>
+    <input type="text" id="input" />
+    <button id="btn">Tilføj</button>
 
+    <!-- Først måde at skrive JavaScript - imellem et "script" element -->
     <script>
       var btn = document.getElementById("btn");
       btn.addEventListener("click", function () {
-        console.log("blah");
+        console.log("Hej med dig fra HTML'en");
       });
     </script>
+
+    <!-- Anden måde at skrive JavaScript - med en reference til sin ".js" fil i "script" elementets "src" attribut -->
+    <script src="script.js"></script>
   </body>
 </html>
