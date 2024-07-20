@@ -23,5 +23,31 @@
     </ul>
     <input type="text" id="input" />
     <button id="btn">Tilføj</button>
+
+    <script>
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        // Få refer til input elementet
+        var input = document.getElementById("input");
+
+        // Få værdien af det indtastede i input elementet
+        var text = input.value;
+
+        // Lav et nyt "li" element
+        var li = document.createElement("li");
+
+        // Tilføj indtastede tekst til "li"
+        li.innerText = text;
+
+        // Få reference til "ul"
+        var ol = document.getElementById("myList");
+
+        // Tilføj ny "li" til "ol"
+        ol.appendChild(li);
+
+        // Slet tekst fra input
+        input.value = "";
+      });
+    </script>
   </body>
 </html>
